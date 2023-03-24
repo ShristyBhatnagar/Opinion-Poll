@@ -1,0 +1,45 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+.training_table{
+    border:2px solid black;
+     width:80% ;
+     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+     border-collapse: collapse;
+    //  tr:nth-child(even) {background-color: #f2f2f2;}
+     text-align: center;
+}
+.Container{
+    min-width:100% !important;
+    height:250px;
+    background-color:Navy;
+    color:white;
+    font-size: 12px;
+    // align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    
+}
+
+.mytrainings_column1{
+margin-left: 20%;
+margin-top: 20%;
+justify-content: space-around;
+}
+
+
+.mytasks_column2{
+    width: 200px;
+}
+ .placeholder{
+    width: 200px;
+    height: 200px;
+   margin-top: 10px;
+ }
+

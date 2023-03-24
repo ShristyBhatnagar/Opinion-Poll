@@ -5,7 +5,7 @@ define([], function() {
     ListCreationText: "Verifying the response list...",
     PlaceholderIconText: "Configure your Quick Poll",
     PlaceholderDescription: "",
-    PlaceholderButtonLabel: "Come on...",
+    PlaceholderButtonLabel: "Configure Quick Poll",
     QuestionLoadingText: "Loading Poll data",
     SubmissionLoadingText: "Submission is inprogress",
     PlsWait: "Please wait...",

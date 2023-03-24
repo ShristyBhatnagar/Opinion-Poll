@@ -14,6 +14,7 @@ import SPHelper from '../../../Common/SPHelper';
 import { MessageScope } from '../../../Common/enumHelper';
 import * as _ from 'lodash';
 import * as moment from 'moment';
+import MyTrainings from './MyTrainings';
 
 export default class SimplePoll extends React.Component<ISimplePollProps, ISimplePollState> {
   private helper: SPHelper = null;
@@ -312,14 +313,28 @@ export default class SimplePoll extends React.Component<ISimplePollProps, ISimpl
     let submitButtonText: string = (BtnSubmitVoteText && BtnSubmitVoteText.trim()) ? BtnSubmitVoteText.trim() : strings.BtnSumbitVote;
     let nopollmsg: string = (NoPollMsg && NoPollMsg.trim()) ? NoPollMsg.trim() : strings.NoPollMsgDefault;
     return (
+         <>
+       <div  className="Container">
+       
+        <div className="mytrainings_column1">
+        <h4>MyTrainings</h4>
+         
+          <MyTrainings />
+        </div>
+        
+      <div className="mytasks_column2">
+      <h4>My Tasks</h4> 
+        </div>
+      
       <div className={styles.simplePoll}>
+      <h4>Quick Poll</h4>
         {!listExists ? (
           <ProgressIndicator label={strings.ListCreationText} description={strings.PlsWait} />
         ) : (
             <>
               {showConfig &&
-                <Placeholder iconName='Edit'
-                  iconText={strings.PlaceholderIconText}
+                <Placeholder iconName='Edit' contentClassName='placeholder' 
+                  iconText={strings.PlaceholderIconText} 
                   description={strings.PlaceholderDescription}
                   buttonLabel={strings.PlaceholderButtonLabel}
                   onConfigure={this.props.openPropertyPane} />
@@ -380,6 +395,8 @@ export default class SimplePoll extends React.Component<ISimplePollProps, ISimpl
           )
         }
       </div>
+      </div>
+      </>
     );
   }
 }
